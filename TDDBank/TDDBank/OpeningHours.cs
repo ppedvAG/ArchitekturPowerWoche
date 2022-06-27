@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,20 @@ namespace TDDBank
                 return true;
 
             return false;
+        }
+
+        public bool IsNowOpen()
+        {
+            return IsOpen(DateTime.Now);
+        }
+
+        public void ReadOpeningHours()
+        {
+            using var sr = new StreamReader(@"m:\BLA\BLA\OH.txt");
+            var line = sr.ReadLine();
+            while (!sr.EndOfStream)
+                Debug.WriteLine(line);
+
         }
     }
 }

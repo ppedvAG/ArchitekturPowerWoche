@@ -37,10 +37,13 @@ namespace TDDBank.Tests
             var account = new BankAccount();
 
             account.Deposit(20m);
+            Assert.Equal(20m, account.Balance);
             account.Withdraw(8m);
+            Assert.Equal(12m, account.Balance);
             account.Withdraw(5m);
-
             Assert.Equal(7m, account.Balance);
+            account.Withdraw(7m);
+            Assert.Equal(0m, account.Balance);
         }
 
         [Fact]

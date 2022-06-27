@@ -1,4 +1,7 @@
-﻿namespace TDDBank.Tests
+﻿using Microsoft.QualityTools.Testing.Fakes;
+
+
+namespace TDDBank.Tests
 {
     public class OpeningHoursTests
     {
@@ -17,6 +20,37 @@
             var oh = new OpeningHours();
 
             Assert.Equal(result, oh.IsOpen(dt));
+        }
+
+        [Fact]
+        public void OpeningHours_IsNowOpen()
+        {
+            using (ShimsContext.Create())
+            {
+                System.Fakes.ShimDateTime.NowGet = () => new DateTime(1111, 11, 11);
+                var oh = new OpeningHours();
+                Assert.False(oh.IsNowOpen());
+
+                System.IO.Fakes.ShimStreamReader.AllInstances.ReadLine = x => "Hallo Welt";
+
+
+            }
+        }
+
+        [Fact]
+        public void OpeningHours_ReadOpeningHours()
+        {
+            using (ShimsContext.Create())
+            {
+                int c = 0;
+                System.IO.Fakes.ShimStreamReader.ConstructorString = (sr, f) => { };
+                System.IO.Fakes.ShimStreamReader.AllInstances.ReadLine = x => "Hallo Welt";
+                System.IO.Fakes.ShimStreamReader.AllInstances.EndOfStreamGet = x => c++ > 3;
+                var oh = new OpeningHours();
+
+                oh.ReadOpeningHours();
+
+            }
         }
     }
 }
