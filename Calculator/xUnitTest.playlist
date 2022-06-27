@@ -1,0 +1,37 @@
+<Playlist Version="2.0">
+  <Rule Name="Includes" Match="Any">
+    <Rule Match="All">
+      <Property Name="Solution" />
+      <Rule Match="Any">
+        <Rule Match="All">
+          <Property Name="Project" Value="Calculator.xUnitTests" />
+          <Rule Match="Any">
+            <Rule Match="All">
+              <Property Name="Namespace" Value="Calculator.xUnitTests" />
+              <Rule Match="Any">
+                <Rule Match="All">
+                  <Property Name="Class" Value="CalcTests" />
+                  <Rule Match="Any">
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Calculator.xUnitTests.CalcTests.Calc_Sum_2_and_4_results_6" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Calculator.xUnitTests.CalcTests.Calc_Sum_2_and_4_results_6" />
+                      </Rule>
+                    </Rule>
+                    <Rule Match="All">
+                      <Property Name="TestWithNormalizedFullyQualifiedName" Value="Calculator.xUnitTests.CalcTests.Calc_Sum_MAX_or_MIN_throws" />
+                      <Rule Match="Any">
+                        <Property Name="DisplayName" Value="Calculator.xUnitTests.CalcTests.Calc_Sum_MAX_or_MIN_throws(a: 2147483647, b: 1)" />
+                        <Property Name="DisplayName" Value="Calculator.xUnitTests.CalcTests.Calc_Sum_MAX_or_MIN_throws(a: -2147483648, b: -1)" />
+                      </Rule>
+                    </Rule>
+                  </Rule>
+                </Rule>
+              </Rule>
+            </Rule>
+          </Rule>
+        </Rule>
+      </Rule>
+    </Rule>
+  </Rule>
+</Playlist>
