@@ -8,14 +8,12 @@ namespace Calculator.xUnitTests
             //Arrange
             var calc = new Calc();
 
-
             //Act
             var result = calc.Sum(2, 4);
 
             //Assert
             Assert.Equal(6, result);
         }
-
    
 
         [Theory]
