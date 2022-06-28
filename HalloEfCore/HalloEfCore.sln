@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32611.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloEfCore", "HalloEfCore\HalloEfCore.csproj", "{F2B25911-A7A1-4208-B6BD-C6AA57910DBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HalloEfCore.Tests", "HalloEfCore.Tests\HalloEfCore.Tests.csproj", "{45CC0B77-2E94-4298-A362-39EB1E4C529A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F2B25911-A7A1-4208-B6BD-C6AA57910DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2B25911-A7A1-4208-B6BD-C6AA57910DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2B25911-A7A1-4208-B6BD-C6AA57910DBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45CC0B77-2E94-4298-A362-39EB1E4C529A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45CC0B77-2E94-4298-A362-39EB1E4C529A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45CC0B77-2E94-4298-A362-39EB1E4C529A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45CC0B77-2E94-4298-A362-39EB1E4C529A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

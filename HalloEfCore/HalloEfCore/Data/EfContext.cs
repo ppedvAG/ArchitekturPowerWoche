@@ -1,5 +1,8 @@
 ﻿using HalloEfCore.Model;
 using Microsoft.EntityFrameworkCore;
+using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("HalloEfCore.Tests")]
 
 namespace HalloEfCore.Data
 {
@@ -10,12 +13,7 @@ namespace HalloEfCore.Data
         public DbSet<Mitarbeiter> Mitarbeiter { get; set; }
         public DbSet<Person> Persons { get; set; }
 
-        public EfContext()
-        {
-            //Database.EnsureDeleted();
-            //Database.EnsureCreated();
-        }
-
+ 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Person>().ToTable("Person");
@@ -24,9 +22,15 @@ namespace HalloEfCore.Data
             modelBuilder.Entity<Mitarbeiter>().Property(x => x.Beruf).HasColumnName("BBBBBBBBeruf");
         }
 
+        string conString;
+
+        public EfContext(string conString = "Server=(localdb)\\mssqllocaldb;Database=HalloEfCore;Trusted_Connection=true")
+        {
+            this.conString = conString;
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var conString = "Server=(localdb)\\mssqllocaldb;Database=HalloEfCore;Trusted_Connection=true";
 
             optionsBuilder.UseSqlServer(conString);
         }
