@@ -13,6 +13,8 @@
             <Button Click="NewMitarbeiter">Neu</Button>
             <Button Click="DeleteSelectedMitarbeiter">Löschen</Button>
             <Button Click="CreateDemoData">Demodaten</Button>
+            <Button Click="ShowAge">Zeige Alter</Button>
+            <Button Click="ShowAvgAgeOfAll">Zeige durchschnittsalter aller</Button>
         </WrapPanel>
         <DataGrid x:Name="myGrid" >
             <DataGrid.Columns>

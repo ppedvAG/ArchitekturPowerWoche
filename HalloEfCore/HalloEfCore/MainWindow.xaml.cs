@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.EntityFrameworkCore;
 using HalloEfCore.Contracts;
+using HalloEfCore.Logic;
 
 namespace HalloEfCore
 {
@@ -68,7 +69,7 @@ namespace HalloEfCore
             var m = new Mitarbeiter()
             {
                 Name = $"Frida",
-                GebDatum = DateTime.Now.AddDays( 17).AddYears(-40),
+                GebDatum = DateTime.Now.AddDays(17).AddYears(-40),
                 Beruf = "Ist die Cheffin",
             };
 
@@ -83,18 +84,34 @@ namespace HalloEfCore
 
         private void DeleteSelectedMitarbeiter(object sender, RoutedEventArgs e)
         {
-            if(myGrid.SelectedItem  is Mitarbeiter m)
+            if (myGrid.SelectedItem is Mitarbeiter m)
             {
-                var dlg = MessageBox.Show($"Soll {m.Name} wirklich gelöscht werden?", 
+                var dlg = MessageBox.Show($"Soll {m.Name} wirklich gelöscht werden?",
                                           "",
                                           MessageBoxButton.YesNo);
 
-                if(dlg == MessageBoxResult.Yes)
+                if (dlg == MessageBoxResult.Yes)
                 {
                     repo.Delete(m);
                     repo.SaveAll();
                 }
             }
+        }
+
+        private void ShowAge(object sender, RoutedEventArgs e)
+        {
+            if (myGrid.SelectedItem is Mitarbeiter m)
+            {
+                int age = MitarbeiterLogic.CalcAge(m.GebDatum);
+                MessageBox.Show($"{age} Jahre");
+            }
+
+        }
+
+        private void ShowAvgAgeOfAll(object sender, RoutedEventArgs e)
+        {
+            var age = MitarbeiterLogic.GetAverageAgeOfAllMyMitarbeiter(repo);
+            MessageBox.Show($"{age} Jahre");
         }
     }
 }
