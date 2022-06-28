@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.EntityFrameworkCore;
+using HalloEfCore.Contracts;
 
 namespace HalloEfCore
 {
@@ -28,11 +29,11 @@ namespace HalloEfCore
             InitializeComponent();
         }
 
-        EfContext context = new EfContext();
+        IRepository repo = new EfRepository();
 
         private void LoadMitarbeiter(object sender, RoutedEventArgs e)
         {
-            myGrid.ItemsSource = context.Mitarbeiter.Where(x => x.Name.StartsWith("F"))
+            myGrid.ItemsSource = repo.Query<Mitarbeiter>().Where(x => x.Name.StartsWith("F"))
                                                     .Include(x => x.Abteilungen)
                                                     .ToList();
         }
@@ -57,9 +58,9 @@ namespace HalloEfCore
                 if (i % 3 == 0)
                     m.Abteilungen.Add(abt2);
 
-                context.Add(m);
+                repo.Add(m);
             }
-            context.SaveChanges();
+            repo.SaveAll();
         }
 
         private void NewMitarbeiter(object sender, RoutedEventArgs e)
@@ -71,13 +72,13 @@ namespace HalloEfCore
                 Beruf = "Ist die Cheffin",
             };
 
-            context.Add(m);
-            context.SaveChanges();
+            repo.Add(m);
+            repo.SaveAll();
         }
 
         private void Save(object sender, RoutedEventArgs e)
         {
-            context.SaveChanges();
+            repo.SaveAll();
         }
 
         private void DeleteSelectedMitarbeiter(object sender, RoutedEventArgs e)
@@ -90,8 +91,8 @@ namespace HalloEfCore
 
                 if(dlg == MessageBoxResult.Yes)
                 {
-                    context.Remove(m);
-                    context.SaveChanges();
+                    repo.Delete(m);
+                    repo.SaveAll();
                 }
             }
         }
