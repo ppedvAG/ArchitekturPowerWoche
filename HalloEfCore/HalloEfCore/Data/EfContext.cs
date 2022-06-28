@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using HalloEfCore.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace HalloEfCore.Data
 {
-    internal class EfContext
+    internal class EfContext : DbContext
     {
+        public DbSet<Abteilung> Abteilungen { get; set; }
+        public DbSet<Kunde> Kunden { get; set; }
+        public DbSet<Mitarbeiter> Mitarbeiter { get; set; }
+
+        public EfContext()
+        {
+            Database.EnsureCreated();
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            var conString = "Server=(localdb)\\mssqllocaldb;Database=HalloEfCore;Trusted_Connection=true";
+
+            optionsBuilder.UseSqlServer(conString);
+        }
     }
 }
