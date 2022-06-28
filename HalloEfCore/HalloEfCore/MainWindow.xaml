@@ -8,11 +8,23 @@
         Title="MainWindow" Height="450" Width="800">
     <DockPanel>
         <WrapPanel DockPanel.Dock="Top">
-            <Button>Laden</Button>
-            <Button>Speichern</Button>
-            <Button>Neu</Button>
-            <Button>Löschen</Button>
+            <Button Click="LoadMitarbeiter">Laden</Button>
+            <Button Click="Save">Speichern</Button>
+            <Button Click="NewMitarbeiter">Neu</Button>
+            <Button Click="DeleteSelectedMitarbeiter">Löschen</Button>
+            <Button Click="CreateDemoData">Demodaten</Button>
         </WrapPanel>
-        <DataGrid x:Name="myGrid"/>
+        <DataGrid x:Name="myGrid" >
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Header="Abteilungen">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ListBox ItemsSource="{Binding Abteilungen}"
+                                     DisplayMemberPath="Bezeichnung"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
     </DockPanel>
 </Window>
