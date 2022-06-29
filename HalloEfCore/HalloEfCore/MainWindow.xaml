@@ -16,7 +16,7 @@
             <Button Click="ShowAge">Zeige Alter</Button>
             <Button Click="ShowAvgAgeOfAll">Zeige durchschnittsalter aller</Button>
         </WrapPanel>
-        <DataGrid x:Name="myGrid" >
+        <DataGrid Name="myGrid" >
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Abteilungen">
                     <DataGridTemplateColumn.CellTemplate>

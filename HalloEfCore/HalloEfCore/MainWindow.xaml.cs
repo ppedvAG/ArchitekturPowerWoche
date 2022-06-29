@@ -17,6 +17,7 @@ using System.Windows.Shapes;
 using Microsoft.EntityFrameworkCore;
 using HalloEfCore.Contracts;
 using HalloEfCore.Logic;
+using System.Threading;
 
 namespace HalloEfCore
 {
@@ -34,6 +35,8 @@ namespace HalloEfCore
 
         private void LoadMitarbeiter(object sender, RoutedEventArgs e)
         {
+            
+            Thread.Sleep(2000);
             myGrid.ItemsSource = repo.Query<Mitarbeiter>().Where(x => x.Name.StartsWith("F"))
                                                     .Include(x => x.Abteilungen)
                                                     .ToList();
