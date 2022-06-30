@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32611.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.Model", "MoviNext.Model\MoviNext.Model.csproj", "{B873A211-0CAA-4DA2-B82E-52FE8F05908B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.Data.EfCore", "MoviNext.Data.EfCore\MoviNext.Data.EfCore.csproj", "{F4079134-B5B8-4B63-A87B-8DF9B75B01D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.Data.EfCore.Tests", "MoviNext.Data.EfCore.Tests\MoviNext.Data.EfCore.Tests.csproj", "{3E3A84C7-68E6-422F-9D93-F7FBD0A02596}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{B873A211-0CAA-4DA2-B82E-52FE8F05908B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B873A211-0CAA-4DA2-B82E-52FE8F05908B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B873A211-0CAA-4DA2-B82E-52FE8F05908B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4079134-B5B8-4B63-A87B-8DF9B75B01D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4079134-B5B8-4B63-A87B-8DF9B75B01D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4079134-B5B8-4B63-A87B-8DF9B75B01D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4079134-B5B8-4B63-A87B-8DF9B75B01D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E3A84C7-68E6-422F-9D93-F7FBD0A02596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E3A84C7-68E6-422F-9D93-F7FBD0A02596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E3A84C7-68E6-422F-9D93-F7FBD0A02596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E3A84C7-68E6-422F-9D93-F7FBD0A02596}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
