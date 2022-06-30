@@ -7,11 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MoviNext.Data.EfCore\MoviNext.Data.EfCore.csproj" />
     <ProjectReference Include="..\MoviNext.Model\MoviNext.Model.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Umrichter\" />
   </ItemGroup>
 
   <ItemGroup>

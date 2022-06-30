@@ -1,7 +1,10 @@
+using MoviNext.Model.Contracts;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IRepository, MoviNext.Data.EfCore.EfRepository>();
 
 var app = builder.Build();
 
