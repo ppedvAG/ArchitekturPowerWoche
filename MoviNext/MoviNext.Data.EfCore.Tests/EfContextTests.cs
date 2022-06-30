@@ -115,7 +115,7 @@ namespace MoviNext.Data.EfCore.Tests
             using (var con = new EfContext())
             {
                 var loaded = con.Find<Umrichter>(ur.Id);
-                loaded.Subkomponenten.Count.Should().Be(2);
+                loaded?.Subkomponenten.Count.Should().Be(2);
                 con.Find<Subkomponente>(sk1.Id).Should().NotBeNull();
                 con.Find<Subkomponente>(sk2.Id).Should().NotBeNull();
 

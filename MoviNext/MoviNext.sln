@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.Data.EfCore", "Mov
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.Data.EfCore.Tests", "MoviNext.Data.EfCore.Tests\MoviNext.Data.EfCore.Tests.csproj", "{3E3A84C7-68E6-422F-9D93-F7FBD0A02596}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.ValidationService", "MoviNext.ValidationService\MoviNext.ValidationService.csproj", "{B3682AE3-A620-49DF-955D-403F580136A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.ValidationService.Tests", "MoviNext.ValidationService.Tests\MoviNext.ValidationService.Tests.csproj", "{DF4BC23D-03DC-4EFE-9EDD-EAF1274FC0AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{3E3A84C7-68E6-422F-9D93-F7FBD0A02596}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E3A84C7-68E6-422F-9D93-F7FBD0A02596}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E3A84C7-68E6-422F-9D93-F7FBD0A02596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3682AE3-A620-49DF-955D-403F580136A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3682AE3-A620-49DF-955D-403F580136A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3682AE3-A620-49DF-955D-403F580136A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3682AE3-A620-49DF-955D-403F580136A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF4BC23D-03DC-4EFE-9EDD-EAF1274FC0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF4BC23D-03DC-4EFE-9EDD-EAF1274FC0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF4BC23D-03DC-4EFE-9EDD-EAF1274FC0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF4BC23D-03DC-4EFE-9EDD-EAF1274FC0AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
