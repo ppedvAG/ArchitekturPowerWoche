@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MoviNext.Data.EfCore\MoviNext.Data.EfCore.csproj" />
     <ProjectReference Include="..\MoviNext.HardwareService\MoviNext.HardwareService.csproj" />
     <ProjectReference Include="..\MoviNext.Model\MoviNext.Model.csproj" />
