@@ -4,7 +4,6 @@ using MoviNext.Data.EfCore;
 using MoviNext.HardwareService;
 using MoviNext.Model;
 using MoviNext.Model.Contracts;
-using System.Reflection;
 
 Console.WriteLine("Hello, World!");
 

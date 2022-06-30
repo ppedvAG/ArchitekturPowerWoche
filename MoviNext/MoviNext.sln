@@ -3,21 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32611.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.Model", "MoviNext.Model\MoviNext.Model.csproj", "{B873A211-0CAA-4DA2-B82E-52FE8F05908B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviNext.Model", "MoviNext.Model\MoviNext.Model.csproj", "{B873A211-0CAA-4DA2-B82E-52FE8F05908B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.Data.EfCore", "MoviNext.Data.EfCore\MoviNext.Data.EfCore.csproj", "{F4079134-B5B8-4B63-A87B-8DF9B75B01D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviNext.Data.EfCore", "MoviNext.Data.EfCore\MoviNext.Data.EfCore.csproj", "{F4079134-B5B8-4B63-A87B-8DF9B75B01D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.Data.EfCore.Tests", "MoviNext.Data.EfCore.Tests\MoviNext.Data.EfCore.Tests.csproj", "{3E3A84C7-68E6-422F-9D93-F7FBD0A02596}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviNext.Data.EfCore.Tests", "MoviNext.Data.EfCore.Tests\MoviNext.Data.EfCore.Tests.csproj", "{3E3A84C7-68E6-422F-9D93-F7FBD0A02596}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.ValidationService", "MoviNext.ValidationService\MoviNext.ValidationService.csproj", "{B3682AE3-A620-49DF-955D-403F580136A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviNext.ValidationService", "MoviNext.ValidationService\MoviNext.ValidationService.csproj", "{B3682AE3-A620-49DF-955D-403F580136A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.ValidationService.Tests", "MoviNext.ValidationService.Tests\MoviNext.ValidationService.Tests.csproj", "{DF4BC23D-03DC-4EFE-9EDD-EAF1274FC0AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviNext.ValidationService.Tests", "MoviNext.ValidationService.Tests\MoviNext.ValidationService.Tests.csproj", "{DF4BC23D-03DC-4EFE-9EDD-EAF1274FC0AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.HardwareService", "MoviNext.HardwareService\MoviNext.HardwareService.csproj", "{BF7AA8C6-81AC-46FA-AB4A-64B7293D6299}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviNext.HardwareService", "MoviNext.HardwareService\MoviNext.HardwareService.csproj", "{BF7AA8C6-81AC-46FA-AB4A-64B7293D6299}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.HardwareService.Tests", "MoviNext.HardwareService.Tests\MoviNext.HardwareService.Tests.csproj", "{F3ECE907-E2D0-476E-88E8-A7A24020167F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviNext.HardwareService.Tests", "MoviNext.HardwareService.Tests\MoviNext.HardwareService.Tests.csproj", "{F3ECE907-E2D0-476E-88E8-A7A24020167F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.TestConsole", "MoviNext.TestConsole\MoviNext.TestConsole.csproj", "{84752CB1-E374-4EA5-B207-4B09C96FCBAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoviNext.UI.TestConsole", "MoviNext.TestConsole\MoviNext.UI.TestConsole.csproj", "{84752CB1-E374-4EA5-B207-4B09C96FCBAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviNext.UI.Web", "MoviNext.UI.Web\MoviNext.UI.Web.csproj", "{4F1BBAF5-B117-4C25-983D-994461F6886F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{84752CB1-E374-4EA5-B207-4B09C96FCBAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84752CB1-E374-4EA5-B207-4B09C96FCBAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84752CB1-E374-4EA5-B207-4B09C96FCBAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F1BBAF5-B117-4C25-983D-994461F6886F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F1BBAF5-B117-4C25-983D-994461F6886F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F1BBAF5-B117-4C25-983D-994461F6886F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F1BBAF5-B117-4C25-983D-994461F6886F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
